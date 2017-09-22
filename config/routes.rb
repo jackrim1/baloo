@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'visitors#index'
+  get 'welcome/new'
+
+  get 'welcome/create'
+
+  root to: 'welcome#new'
   devise_for :users
   resources :users
 end
